@@ -1,1 +1,1 @@
-export { default } from 'eas/components/override-area/component';
+export { default } from 'ember-admin-theme-manager/components/override-area/component';

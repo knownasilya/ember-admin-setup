@@ -1,1 +1,1 @@
-export { default } from 'eas/components/initialize-admin-theme/component';
+export { default } from 'ember-admin-theme-manager/components/admin-theme-manager/component';
