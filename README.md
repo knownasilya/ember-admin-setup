@@ -1,6 +1,8 @@
-# Eas
+# Ember Admin Theme Manager
 
-This README outlines the details of collaborating on this Ember addon.
+Allows to load custom themes and override areas
+defined by Ember Admin, which is a lazy loaded engine.
+
 
 ## Installation
 
