@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'eas'
+  name: 'ember-admin-theme-manager'
 };

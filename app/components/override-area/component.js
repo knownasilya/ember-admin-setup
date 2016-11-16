@@ -1,0 +1,1 @@
+export { default } from 'eas/components/override-area/component';
