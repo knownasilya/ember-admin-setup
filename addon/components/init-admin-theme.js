@@ -1,6 +1,12 @@
 import Ember from 'ember';
 import layout from '../templates/components/init-admin-theme';
 
-export default Ember.Component.extend({
+const Component = Ember.Component.extend({
   layout
 });
+
+Component.reopenClass({
+  positionalParams: ['theme']
+});
+
+export default Component;
