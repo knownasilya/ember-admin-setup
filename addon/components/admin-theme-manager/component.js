@@ -4,5 +4,11 @@ import layout from './template';
 const { inject } = Ember;
 
 export default Ember.Component.extend({
-  layout
+  layout,
+  adminConfig: inject.service(),
+
+  didReceiveAttrs() {
+    let theme = this.get('theme');
+    this.set('adminConfig.activeTheme', theme);
+  }
 });
