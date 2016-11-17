@@ -15,6 +15,7 @@ const Component = Ember.Component.extend({
   }),
 
   setComponent() {
+    let adminConfig = this.get('adminConfig');
     let areas = this.get('adminConfig.areas');
     let theme = this.get('theme') || 'default';
     let area = this.get('area');
@@ -31,7 +32,7 @@ const Component = Ember.Component.extend({
     }
 
     set(areas, location, send);
-    this.notifyPropertyChange('adminConfig.areas');
+    adminConfig.notifyRenderArea(location);
   }
 });
 
