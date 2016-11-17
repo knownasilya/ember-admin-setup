@@ -3,27 +3,30 @@
 Allows to load custom themes and override areas
 defined by Ember Admin, which is a lazy loaded engine.
 
+## Usage
 
-## Installation
+Install
 
-* `git clone <repository-url>` this repository
-* `cd eas`
-* `npm install`
-* `bower install`
+```sh
+ember install ember-admin-theme-manager
+```
 
-## Running
+And in your parent app add the following:
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+```hbs
+{{#admin-theme-manager theme='bootstrap' adminConfig=adminConfig as |theme|}}
+  {{#if (eq theme 'bootstrap')}}
+    {{mount 'ember-admin-bootstrap'}}
+  {{/if}}
+{{/admin-theme-manager}}
+```
 
-## Running Tests
+Here `theme='bootstrap'` sets the active theme and mounts that once
+Ember Admin has been laoded. This can be a dynamic value, so you
+can use a select and change themes.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Limitations
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+At the moment this doesn't support lazy loaded themes, because ember-engines don't
+support lazy loaded routeless engines yet, but the setup makes it possible once
+the support is there.
