@@ -1,12 +1,20 @@
 import Ember from 'ember';
 import layout from './template';
 
-const { set, inject } = Ember;
+const { set, inject, observer } = Ember;
 
 const Component = Ember.Component.extend({
   adminConfig: inject.service(),
 
   didReceiveAttrs() {
+    this.setComponent();
+  },
+
+  setComponentOnThemeChange: observer('adminConfig.activeTheme', function () {
+    this.setComponent();
+  }),
+
+  setComponent() {
     let areas = this.get('adminConfig.areas');
     let theme = this.get('theme') || 'default';
     let area = this.get('area');
