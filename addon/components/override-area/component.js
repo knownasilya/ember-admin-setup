@@ -31,6 +31,7 @@ const Component = Ember.Component.extend({
     }
 
     set(areas, location, send);
+    this.notifyPropertyChange('adminConfig.areas');
   }
 });
 
