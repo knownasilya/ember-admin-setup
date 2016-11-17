@@ -3,7 +3,7 @@ import layout from './template';
 
 const { inject } = Ember;
 
-export default Ember.Component.extend({
+const Component = Ember.Component.extend({
   layout,
   adminConfig: inject.service(),
 
@@ -12,3 +12,9 @@ export default Ember.Component.extend({
     this.set('adminConfig.activeTheme', theme);
   }
 });
+
+Component.reopenClass({
+  positionalParams: ['theme']
+});
+
+export default Component;
