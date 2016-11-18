@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import layout from '../templates/components/init-admin-theme';
+import layout from './template';
 
 const Component = Ember.Component.extend({
   layout

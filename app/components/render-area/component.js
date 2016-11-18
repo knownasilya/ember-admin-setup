@@ -1,0 +1,1 @@
+export { default } from 'ember-admin-theme-manager/components/render-area/component';
